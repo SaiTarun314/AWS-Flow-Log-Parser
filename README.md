@@ -46,7 +46,7 @@ git clone https://github.com/SaiTarun314/AWS-Flow-Log-Parser.git
 
 - Navigate to the `src/` directory and run the `parser.py` file:
 
-```
+```sh
 python3 parser.py --lookup ../data/lookup.csv --logs ../data/flow_log_1.txt ../data/flow_log_2.txt --output ../output/
 ```
 
@@ -88,7 +88,7 @@ To ensure the correctness of the flow log processor, a suite of unit tests has b
 To execute the tests, run the following command in the project directory:
 
 ```sh
-python -m unittest discover
+python3 -m unittest discover tests
 ```
 
 This will automatically discover and run all test cases in the `tests` directory or within the script.
