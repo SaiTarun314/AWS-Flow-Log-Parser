@@ -1,0 +1,4 @@
+# Ignore these files from Version control
+/myenv
+/src/__pycache__
+/tests/__pycache__

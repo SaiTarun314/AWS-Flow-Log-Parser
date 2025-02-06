@@ -74,6 +74,24 @@ Port,Protocol,Count
 993,tcp,1
 143,tcp,1
 ```
+## Testing
+
+To ensure the correctness of the flow log processor, a suite of unit tests has been implemented using the `unittest` framework. These tests validate the core functionalities of the script, including:
+
+- **Loading Protocol Mappings:** Ensures that protocol mappings from the CSV file are correctly read and stored.
+- **Parsing Lookup Table:** Confirms that the lookup table is properly loaded and validated.
+- **Processing Flow Log Entries:** Checks that valid entries are parsed correctly and handles malformed or unsupported entries properly.
+- **Handling Edge Cases:** Includes tests for scenarios such as unsupported versions, missing protocols, and log statuses (`NODATA`, `SKIPDATA`).
+- **Generating Output Files:** Verifies that processed data is correctly written to an output CSV file.
+
+### Running the Tests
+To execute the tests, run the following command in the project directory:
+
+```sh
+python -m unittest discover
+```
+
+This will automatically discover and run all test cases in the `tests` directory or within the script.
 
 ## Parallel Processing
 The program supports parallel processing using the ThreadPoolExecutor to speed up processing of multiple flow log files. By default, it uses 4 worker threads, but this can be adjusted if needed.

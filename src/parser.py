@@ -42,6 +42,10 @@ def load_protocol_mapping(protocol_file: str):
         logging.error(f"Error loading protocol mapping: {e}")
         raise
 
+def get_protocol_map() -> Dict[str, str] :
+    """Returns the value of the Protocol Map"""
+    return PROTOCOL_MAPPING
+    
 def parse_lookup_table(lookup_file: str) -> Dict[Tuple[str, str], str]:
     """Parses lookup table from a CSV file."""
     lookup = {}
